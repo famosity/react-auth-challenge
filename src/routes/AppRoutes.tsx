@@ -4,6 +4,7 @@ import ErrorPage from "../pages/NotFount";
 import Login from "../pages/Login";
 import React from "react";
 import { useAuth } from "../hook/useAuth";
+import ErrorPhoto from "@/pages/ErrorPhoto";
 
 const PrivateRoute: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -26,6 +27,14 @@ const AppRoutes = () => (
         <PublicRoute>
           <Login />
         </PublicRoute>
+      }
+    />
+    <Route
+      path="/error"
+      element={
+        <PrivateRoute>
+          <ErrorPhoto/>
+        </PrivateRoute>
       }
     />
     <Route path="*" element={<ErrorPage />} />
