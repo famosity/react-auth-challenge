@@ -4,8 +4,7 @@ import { useAuth } from "@/hook/useAuth";
 import { usePageParam } from "@/hook/usePageParam";
 import { useNavigate } from "react-router";
 import type { ResponseApi } from "@/types";
-
-const TIMEOUT = 2000;
+import { TIMEOUT } from "@/utils/constant";
 
 export const usePhotos = () => {
   const { token } = useAuth();

@@ -7,14 +7,10 @@ import {
 } from "./ui/pagination";
 import { generatePaginationNumbers } from "@/utils/generatePaginationNumbers";
 import { usePageParam } from "@/hook/usePageParam";
+import type { PaginationProps } from "@/types";
 
-
-interface Props {
-  totalPages: number;
-}
-
-function PaginationsComponent({ totalPages }: Props) {
-    const{page, setSearchParams, searchParams}=usePageParam()
+function PaginationsComponent({ totalPages }: PaginationProps) {
+  const{page, setSearchParams, searchParams}=usePageParam()
 
 
   const allPages = generatePaginationNumbers(page, totalPages);

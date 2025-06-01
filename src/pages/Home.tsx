@@ -6,7 +6,7 @@ import { usePhotos } from "@/hook/usePhotos";
 import { Loader2 } from "lucide-react";
 
 const Home: React.FC = () => {
-    const { photos, loading } = usePhotos();
+  const { photos, loading } = usePhotos();
 
   return (
     <div className="container mx-auto min-h-screen bg-gradient-to-br">
@@ -21,8 +21,8 @@ const Home: React.FC = () => {
             </div>
       ) : (
             <>
-                <PhotoList items={photos?.content || []} loading={loading} />
-                <PaginationsComponent totalPages={photos?.total_pages || 0}/>
+              <PhotoList items={photos?.content || []} loading={loading} />
+              <PaginationsComponent totalPages={photos?.total_pages || 0}/>
             </>
         )}
       </div>
