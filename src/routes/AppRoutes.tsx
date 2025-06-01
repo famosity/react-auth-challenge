@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import React from "react";
 import { useAuth } from "../hook/useAuth";
 import ErrorPhoto from "@/pages/ErrorPhoto";
+import Home from "@/pages/Home";
 
 const PrivateRoute: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -27,6 +28,14 @@ const AppRoutes = () => (
         <PublicRoute>
           <Login />
         </PublicRoute>
+      }
+    />
+    <Route
+      path="/home"
+      element={
+        <PrivateRoute>
+          <Home />
+        </PrivateRoute>
       }
     />
     <Route
