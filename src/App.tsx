@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { AuthProvider } from './context/AuthContext';
+import { BrowserRouter } from 'react-router';
+import AppRoutes from './routes/AppRoutes';
 
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <p className='text-4xl text-red-500'>Hola mundo </p>
-    </>
-  )
-}
+const App: React.FC = () => (
+  <AuthProvider>
+    <BrowserRouter>
+        <AppRoutes />
+    </BrowserRouter>
+  </AuthProvider>
+);
 
 export default App
