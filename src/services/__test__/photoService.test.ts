@@ -21,7 +21,7 @@ describe("getPhotos", () => {
     const result = await getPhotos(2, 10);
 
     expect(axiosInstance.get).toHaveBeenCalledWith(
-      "photos?_start=40&_limit=10",
+      "photos?_start=10&_limit=10",
     );
     expect(result).toEqual({
       content: mockPhotos,
