@@ -4,7 +4,7 @@ import { useAuth } from "@/hook/useAuth";
 import { usePageParam } from "@/hook/usePageParam";
 import { useNavigate } from "react-router";
 import type { ResponseApi } from "@/types";
-import { TIMEOUT } from "@/utils/constant";
+import { TIMEOUT, TOTAL_ITEMS } from "@/utils/constant";
 
 export const usePhotos = () => {
   const { token } = useAuth();
@@ -20,7 +20,7 @@ export const usePhotos = () => {
     const fetchPhotos = async () => {
       setLoading(true);
       try {
-        const response = await getPhotos(page, 20);
+        const response = await getPhotos(page, TOTAL_ITEMS);
         setPhotos(response);
       } catch (error) {
         console.error("Ocurrió un error:", error);
