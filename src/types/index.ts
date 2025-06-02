@@ -19,4 +19,8 @@ export type SessionExpiredModalProps = {
 
 export type PaginationProps = {
     totalPages: number;
-  }
+}
+
+export type PhotoListProps = {
+    items: Photo[];
+};

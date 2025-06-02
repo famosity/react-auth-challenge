@@ -16,14 +16,17 @@ const Home: React.FC = () => {
           Galería de Fotos
         </h1>
         {loading ? (
-          <div className="flex h-[calc(100vh-300px)] items-center justify-center">
-              <Loader2 className="h-12 w-12 animate-spin text-slate-400" />
+          <div 
+            className="flex h-[calc(100vh-300px)] items-center justify-center"
+            role="status"
+          >
+            <Loader2 className="h-12 w-12 animate-spin text-slate-400" />
           </div>
       ) : (
-            <>
-              <PhotoList items={photos?.content || []} loading={loading} />
-              <PaginationsComponent totalPages={photos?.total_pages || 0}/>
-            </>
+          <>
+            <PhotoList items={photos?.content || []} />
+            <PaginationsComponent totalPages={photos?.total_pages || 0} />
+          </>
         )}
       </div>
     </div>
