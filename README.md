@@ -85,6 +85,7 @@ Esta app es una demo hecha con *React + Vite + TypeScript* que muestra cómo man
 ## ¿Cómo está organizado el código?
 
 
+```bash
 src/
   components/
   context/
