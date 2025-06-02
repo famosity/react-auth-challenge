@@ -73,11 +73,12 @@ const Login: React.FC = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel htmlFor="email">Email</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <Mail className="absolute top-3 left-3 h-4 w-4 text-gray-400" />
                         <Input
+                          id="email"
                           type="text"
                           placeholder="tu@ejemplo.com"
                           className="pl-10"
@@ -95,11 +96,12 @@ const Login: React.FC = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Contraseña</FormLabel>
+                    <FormLabel htmlFor="password">Contraseña</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <Lock className="absolute top-3 left-3 h-4 w-4 text-gray-400" />
                         <Input
+                          id="password"
                           type={showPassword ? "text" : "password"}
                           placeholder="Tu contraseña"
                           className="pr-10 pl-10"
