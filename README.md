@@ -32,25 +32,36 @@ Esta app es una demo hecha con *React + Vite + TypeScript* que muestra cómo man
 ## ¿Cómo lo uso?
 
 1. *Cloná el repo:*
-   bash
+   ```bash
+
    git clone https://github.com/famosity/react-auth-challenge.git
    cd react-auth-challenge
    
+   ```
 
 2. *Instalá las dependencias:*
-   bash
+   ```bash
+
    npm i o npm install
+
+   ```
+
    
 
 3. *Arrancá la app:*
-   bash
+   ```bash
+
    npm run dev
+
+   ```
    
 
 4. *Si querés correr los tests:*
-   bash
+   ```bash
+
    npm test
-   
+
+   ```   
 
 ---
 
